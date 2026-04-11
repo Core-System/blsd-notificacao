@@ -1,0 +1,20 @@
+
+
+services:
+  notificacao:
+    container_name: notificacao_blessed
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    networks:
+      - application_network
+
+networks:
+  application_network:
+    name: application_network
