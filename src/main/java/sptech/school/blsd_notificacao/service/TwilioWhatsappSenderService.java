@@ -16,12 +16,12 @@ public class TwilioWhatsappSenderService implements IWhatsappSender{
 
     @Override
     public void sendWhatsapp(WhatsappRequest whatsappRequest) {
-        String from = "De: "+ whatsappRequest.sender() + "\n";
+        String from = "De: "+ whatsappRequest.remetente() + "\n";
         Message message = Message
                 .creator(
-                        new PhoneNumber("whatsapp:+55" + whatsappRequest.ddd() + whatsappRequest.phoneNumber()),
+                        new PhoneNumber("whatsapp:+55" + whatsappRequest.ddd() + whatsappRequest.telefone()),
                         new PhoneNumber("whatsapp:"+twilioConfiguration.getWhatsappNumber()),
-                        from + whatsappRequest.message()
+                        from + whatsappRequest.mensagem()
                 ).create();
         log.info("Whatsapp enviado com sucesso");
     }

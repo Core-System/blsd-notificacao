@@ -3,16 +3,16 @@ package sptech.school.blsd_notificacao.dtos;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record SmsRequest(
-        String sender,
+        String remetente,
         int ddd,
-        String phoneNumber,
-        String message
+        String telefone,
+        String mensagem
 ) {
-    public SmsRequest(@JsonProperty("sender") String sender, @JsonProperty("ddd") int ddd, @JsonProperty("phoneNumber") String phoneNumber, @JsonProperty("message") String message) {
-        this.sender = sender;
+    public SmsRequest(@JsonProperty("remetente") String remetente, @JsonProperty("ddd") int ddd, @JsonProperty("telefone") String telefone, @JsonProperty("mensagem") String mensagem) {
+        this.remetente = remetente;
         this.ddd = ddd;
-        this.phoneNumber = phoneNumber;
-        this.message = message;
+        this.telefone = telefone;
+        this.mensagem = mensagem;
     }
 }
 

@@ -16,12 +16,12 @@ public class TwilioSmsSenderService implements ISmsSender{
 
     @Override
     public void sendSms(SmsRequest smsRequest) {
-        String from = "De: "+ smsRequest.sender() + "\n";
+        String from = "De: "+ smsRequest.remetente() + "\n";
         Message message = Message
                 .creator(
-                        new PhoneNumber("+55" + smsRequest.ddd() + smsRequest.phoneNumber()),
+                        new PhoneNumber("+55" + smsRequest.ddd() + smsRequest.telefone()),
                         new PhoneNumber(twilioConfiguration.getPhoneNumber()),
-                        from + smsRequest.message()
+                        from + smsRequest.mensagem()
                 ).create();
         log.info("Sms enviado com sucesso");
     }
