@@ -1,7 +1,8 @@
 package sptech.school.blsd_notificacao.service;
 
-import sptech.school.blsd_notificacao.dtos.WhatsappRequest;
+import sptech.school.blsd_notificacao.dtos.NotificacaoSmsWhatsappRequest;
+
 
 public interface IWhatsappSender {
-    void sendWhatsapp(WhatsappRequest whatsappRequest);
+    void sendWhatsapp(NotificacaoSmsWhatsappRequest whatsappRequest);;
 }

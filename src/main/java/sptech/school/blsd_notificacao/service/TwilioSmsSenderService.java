@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sptech.school.blsd_notificacao.config.TwilioConfiguration;
+import sptech.school.blsd_notificacao.dtos.NotificacaoSmsWhatsappRequest;
 import sptech.school.blsd_notificacao.dtos.SmsRequest;
 
 @Service("twilio_sms")
@@ -15,11 +16,11 @@ public class TwilioSmsSenderService implements ISmsSender{
     TwilioConfiguration twilioConfiguration;
 
     @Override
-    public void sendSms(SmsRequest smsRequest) {
-        String from = "De: "+ smsRequest.remetente() + "\n";
+    public void sendSms(NotificacaoSmsWhatsappRequest smsRequest) {
+        String from = "De: "+ smsRequest.rementente() + "\n";
         Message message = Message
                 .creator(
-                        new PhoneNumber("+55" + smsRequest.ddd() + smsRequest.telefone()),
+                        new PhoneNumber("+55" + smsRequest.ddd() + smsRequest.numero()),
                         new PhoneNumber(twilioConfiguration.getPhoneNumber()),
                         from + smsRequest.mensagem()
                 ).create();

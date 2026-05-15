@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import sptech.school.blsd_notificacao.dtos.NotificacaoSmsWhatsappRequest;
 import sptech.school.blsd_notificacao.dtos.SmsRequest;
 import sptech.school.blsd_notificacao.service.ISmsSender;
 
@@ -18,7 +19,7 @@ public class SmsSenderController {
     ISmsSender smsSender;
 
     @PostMapping
-    public void sendSms(@RequestBody SmsRequest smsRequest){
+    public void sendSms(@RequestBody NotificacaoSmsWhatsappRequest smsRequest){
         smsSender.sendSms(smsRequest);
     }
 
