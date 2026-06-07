@@ -1,5 +1,3 @@
-
-
 services:
   notificacao:
     container_name: notificacao_blessed
@@ -9,12 +7,13 @@ services:
     ports:
       - ${APP_PORT}:${APP_PORT}
     volumes:
-      - .:/app
+      - notification-maven-cache:/root/.m2
     env_file:
       - .env
     networks:
       - application_network
-
 networks:
   application_network:
     name: application_network
+volumes:
+  notification-maven-cache:
