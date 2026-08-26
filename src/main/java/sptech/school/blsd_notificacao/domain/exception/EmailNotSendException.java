@@ -1,4 +1,4 @@
-package sptech.school.blsd_notificacao.exception;
+package sptech.school.blsd_notificacao.domain.exception;
 
 public class EmailNotSendException extends RuntimeException {
     public EmailNotSendException(String message) {

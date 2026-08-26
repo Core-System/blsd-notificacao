@@ -1,17 +1,14 @@
-package sptech.school.blsd_notificacao.service;
+package sptech.school.blsd_notificacao.usecases.service;
 
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMailMessage;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
-import sptech.school.blsd_notificacao.dtos.EmailRequest;
-import sptech.school.blsd_notificacao.exception.EmailNotSendException;
+import sptech.school.blsd_notificacao.usecases.dtos.EmailRequest;
+import sptech.school.blsd_notificacao.domain.exception.EmailNotSendException;
 
 import java.io.UnsupportedEncodingException;
 
