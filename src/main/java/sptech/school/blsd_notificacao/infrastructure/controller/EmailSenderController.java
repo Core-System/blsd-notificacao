@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sptech.school.blsd_notificacao.usecases.dtos.EmailRequest;
-import sptech.school.blsd_notificacao.usecases.service.IEmailSender;
+import sptech.school.blsd_notificacao.infrastructure.dtos.EmailRequest;
+import sptech.school.blsd_notificacao.usecases.IEmailSender;
 
 @RestController
 @RequestMapping("/email")

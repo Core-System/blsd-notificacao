@@ -1,4 +1,4 @@
-package sptech.school.blsd_notificacao.usecases.service;
+package sptech.school.blsd_notificacao.usecases;
 
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
@@ -6,11 +6,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sptech.school.blsd_notificacao.infrastructure.config.TwilioConfiguration;
-import sptech.school.blsd_notificacao.usecases.dtos.NotificacaoSmsWhatsappRequest;
+import sptech.school.blsd_notificacao.infrastructure.dtos.NotificacaoSmsWhatsappRequest;
 
 @Service("twilio_sms")
 @Slf4j
-public class TwilioSmsSenderService implements ISmsSender{
+public class TwilioSmsSenderUseCase implements ISmsSender{
     @Autowired
     TwilioConfiguration twilioConfiguration;
 
