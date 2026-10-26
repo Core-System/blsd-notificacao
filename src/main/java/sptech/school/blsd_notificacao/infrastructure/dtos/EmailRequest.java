@@ -1,4 +1,4 @@
-package sptech.school.blsd_notificacao.dtos;
+package sptech.school.blsd_notificacao.infrastructure.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

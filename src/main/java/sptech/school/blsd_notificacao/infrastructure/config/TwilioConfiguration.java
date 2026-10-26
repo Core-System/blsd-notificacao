@@ -1,4 +1,4 @@
-package sptech.school.blsd_notificacao.config;
+package sptech.school.blsd_notificacao.infrastructure.config;
 
 
 import lombok.Getter;
