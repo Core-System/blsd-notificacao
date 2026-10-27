@@ -7,6 +7,8 @@ services:
     ports:
       - '5672:5672'
       - '15672:15672'
+    networks:
+      - application_network
   notificacao:
     container_name: notificacao_blessed
     build:
@@ -18,6 +20,8 @@ services:
       - notification-maven-cache:/root/.m2
     env_file:
       - .env
+    depends_on:
+      - rabbitmq
     networks:
       - application_network
 networks:

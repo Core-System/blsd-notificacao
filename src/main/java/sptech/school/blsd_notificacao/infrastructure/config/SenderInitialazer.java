@@ -11,8 +11,6 @@ public class SenderInitialazer {
     public SenderInitialazer(TwilioConfiguration senderConfiguration){
         Twilio.init(senderConfiguration.getAccountSid(), senderConfiguration.getAuthToken());
 
-        logger.info("Inicialização das credenciais do twilio: "+ senderConfiguration.getAccountSid()+
-                "Auth Token: " + senderConfiguration.getAuthToken() +
-                " and trial number: "+ senderConfiguration.getPhoneNumber());
+        logger.info("Credenciais do Twilio inicializadas para o número configurado.");
     }
 }
